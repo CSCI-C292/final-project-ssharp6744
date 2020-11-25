@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     
+    // This video helped me with the player movements: https://www.youtube.com/watch?v=_QajrabyTJc
     void Update()
     {
         float x = Input.GetAxis("Horizontal");
