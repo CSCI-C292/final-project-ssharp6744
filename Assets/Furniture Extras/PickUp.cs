@@ -6,6 +6,7 @@ public class PickUp : MonoBehaviour
 {
     [SerializeField] Transform _destination;
     [SerializeField] Transform _objectPosition;
+    [SerializeField] GameObject _copy;
 
     //This video helped me with this script: https://www.youtube.com/watch?v=IEV64CLZra8
     void OnMouseDown() 
@@ -16,6 +17,7 @@ public class PickUp : MonoBehaviour
             GetComponent<Rigidbody>().freezeRotation = true;
             transform.position = _objectPosition.position;
             transform.parent = GameObject.Find("Destination").transform; 
+            
         }
          
     }
@@ -24,6 +26,11 @@ public class PickUp : MonoBehaviour
     {
         transform.parent = null;
         GetComponent<Rigidbody>().useGravity = true; 
-        GetComponent<Rigidbody>().freezeRotation = false;   
+        GetComponent<Rigidbody>().freezeRotation = false;
+
+        if (Vector3.Distance(transform.position, _copy.transform.position) <= 1)
+        {
+            _copy.SetActive(true);
+        }   
     }
 }

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 147de59bb4e293a4f9ebdd29071f3861, type: 3}
+  m_Name: Hint1
+  m_EditorClassIdentifier: 
+  DialogSlides:
+  - Merry Christmas! Surprise! I got you a present! I wanted to be original this
+    year and hid the present so you could search my cabin to find it. I'm a genius,
+    so I rigged the house to open when certain things are placed in certain areas.
+    Look for these notes to help you along the way.                           (Press
+    Escape to continue)
+  - The notes are small white rectangles, so look carefully for them. Click on the
+    to read and press Escape to leave them. Good Luck!
