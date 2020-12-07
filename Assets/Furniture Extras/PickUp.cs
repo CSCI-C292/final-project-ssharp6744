@@ -28,9 +28,23 @@ public class PickUp : MonoBehaviour
         GetComponent<Rigidbody>().useGravity = true; 
         GetComponent<Rigidbody>().freezeRotation = false;
 
-        if (Vector3.Distance(transform.position, _copy.transform.position) <= 1)
+        if (_copy != null && Vector3.Distance(transform.position, _copy.transform.position) <= 1)
         {
             _copy.SetActive(true);
         }   
+    }
+
+    void OnMouseEnter() 
+    {
+        var outline = gameObject.AddComponent<Outline>();
+
+        outline.OutlineMode = Outline.Mode.OutlineAll;
+        outline.OutlineColor = Color.yellow;
+        outline.OutlineWidth = 5f;
+    }
+
+    void OnMouseExit() 
+    {
+        Destroy(GetComponent<Outline>());
     }
 }

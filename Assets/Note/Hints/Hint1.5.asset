@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogSlides:
   - Here's your first hint. This is not just a colorful circle. Find the top to grant
-    access into my cabin. Make sure to check the ice.
+    access into my cabin. Make sure to check the ice. If you need to reset the scene
+    press Enter.
