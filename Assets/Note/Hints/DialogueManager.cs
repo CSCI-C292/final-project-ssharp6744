@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
     void Awake() 
     {
         GameEvents.DialogFinished += OnDialogFinished;
-        GameEvents.DialogInitiated += OnDialogInitiated;     
+        GameEvents.DialogInitiated += OnDialogInitiated;
     }
 
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
     void OnDialogFinished(object sender, EventArgs args)
     {
         GetComponent<Canvas>().enabled = false;
-         _runtimeData.CurrentGameplayState = GameplayState.FreeWalk;
+        _runtimeData.CurrentGameplayState = GameplayState.FreeWalk;
     }
 
     void ShowSlide()

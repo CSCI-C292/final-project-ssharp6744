@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PickUp : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class PickUp : MonoBehaviour
             
         }
          
+        if (name == "gingerBread")
+        {
+            StartCoroutine(WaitTime());
+        }
     }
 
     void OnMouseUp() 
@@ -46,5 +51,12 @@ public class PickUp : MonoBehaviour
     void OnMouseExit() 
     {
         Destroy(GetComponent<Outline>());
+    }
+    
+    IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Ending");
+        Cursor.lockState = CursorLockMode.None;
     }
 }

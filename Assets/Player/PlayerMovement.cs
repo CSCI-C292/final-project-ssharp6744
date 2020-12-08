@@ -8,14 +8,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] CharacterController controller;
     [SerializeField] RuntimeData _runtimeData;
     [SerializeField] Dialogue _intro;
+    [SerializeField] GameObject _canvas;
     public float speed = 10f;
     public float gravity = -10f;
     Vector3 velocity;
     
+    void Awake()
+    {
+        DontDestroyOnLoad(_canvas);
+    }
     void Start() 
     {
         GameEvents.InvokeDialogInitiated(_intro);
-        DontDestroyOnLoad(GameObject.Find("Canvas"));
+        
     }
 
     // This video helped me with the player movements: https://www.youtube.com/watch?v=_QajrabyTJc
