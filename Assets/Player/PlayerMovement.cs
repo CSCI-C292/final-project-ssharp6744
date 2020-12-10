@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] RuntimeData _runtimeData;
     [SerializeField] Dialogue _intro;
     [SerializeField] GameObject _canvas;
+    [SerializeField] GameObject _fade;
     public float speed = 10f;
     public float gravity = -10f;
     Vector3 velocity;
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     void Start() 
     {
         GameEvents.InvokeDialogInitiated(_intro);
+        //_fade.SetActive(false);
         
     }
 

@@ -8,6 +8,7 @@ public class PickUp : MonoBehaviour
     [SerializeField] Transform _destination;
     [SerializeField] Transform _objectPosition;
     [SerializeField] GameObject _copy;
+    [SerializeField] GameObject _fade;
 
     //This video helped me with this script: https://www.youtube.com/watch?v=IEV64CLZra8
     void OnMouseDown() 
@@ -55,8 +56,13 @@ public class PickUp : MonoBehaviour
     
     IEnumerator WaitTime()
     {
-        yield return new WaitForSeconds(3);
+        _fade.SetActive(true); 
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Ending");
+        yield return new WaitForEndOfFrame();
+        _fade.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
+        
+        
     }
 }
