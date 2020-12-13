@@ -62,7 +62,5 @@ public class PickUp : MonoBehaviour
         yield return new WaitForEndOfFrame();
         _fade.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
-        
-        
     }
 }

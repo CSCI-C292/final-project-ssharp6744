@@ -10,6 +10,6 @@ public class Copy : MonoBehaviour
     void Start() 
     {
         _original.SetActive(false);
-        _lockedDoor.GetComponent<Animator>().enabled = true;    
+        _lockedDoor.GetComponent<Animator>().enabled = true;  
     }
 }

@@ -21,8 +21,6 @@ public class PlayerMovement : MonoBehaviour
     void Start() 
     {
         GameEvents.InvokeDialogInitiated(_intro);
-        //_fade.SetActive(false);
-        
     }
 
     // This video helped me with the player movements: https://www.youtube.com/watch?v=_QajrabyTJc
