@@ -9,7 +9,7 @@ public class Door : MonoBehaviour
 
     void OnMouseOver() 
     {
-        if (Vector3.Distance(GameObject.Find("First Person Player").transform.position, transform.parent.position) <= 2)
+        if (Vector3.Distance(GameObject.Find("First Person Player").transform.position, transform.parent.position) <= 3)
         {
             if (!_animator.enabled)
             {

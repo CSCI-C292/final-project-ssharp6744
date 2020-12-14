@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,9 +9,9 @@ public class Note : MonoBehaviour
     
     void OnMouseUpAsButton() 
     {
-        if (Vector3.Distance(GameObject.Find("First Person Player").transform.position, transform.position) <= 2)
+        if (Vector3.Distance(GameObject.Find("First Person Player").transform.position, transform.position) <= 3)
         {
-            _note.SetActive(true);
+            _note.GetComponent<Canvas>().enabled = true;
             GameEvents.InvokeDialogInitiated(_dialog);
         }
     }
